@@ -1,20 +1,15 @@
-import { Shape } from "./shapes/shape";
-
-interface Renderer {
-    draw(): void;
-}
-
-function newRenderer(shape: Shape): Renderer {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.newRenderer = void 0;
+function newRenderer(shape) {
     return {
-        draw() {
-            const area: number = shape.computeArea();
+        draw: function () {
+            var area = shape.computeArea();
             console.log("Shape drawn\n" + "Its area is " + area);
         },
     };
 }
-
-export { newRenderer };
-
+exports.newRenderer = newRenderer;
 // function newRenderer(rectangle: Rectangle) {
 //     return {
 //         draw() {
@@ -23,5 +18,4 @@ export { newRenderer };
 //         }
 //     }
 // }
-
 // export { newRenderer }
